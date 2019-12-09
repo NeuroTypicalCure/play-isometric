@@ -4,7 +4,7 @@
   "description": "Status Preview --- ![](isostatus.png)",
   "private": true,
   "scripts": {
-    "start": "webpack && firefox ./dist/index.html",
+    "start": "webpack --config ./config/webpack.config.js && (open ./dist/index.html || gnome-open ./dist/index.html || firefox ./dist/index.html || chrome ./dist/index.html || safari ./dist/index.html || edge ./dist/index.html || opera ./dist/index.html)",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,6 +22,8 @@
     "webpack": "^4.41.2"
   },
   "devDependencies": {
+    "@babel/core": "^7.7.5",
+    "babel-loader": "^8.0.6",
     "webpack-cli": "^3.3.10"
   }
 }
