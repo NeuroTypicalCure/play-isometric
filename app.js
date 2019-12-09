@@ -4,12 +4,17 @@ let ctx = c.getContext('2d');
 c.width = 800;
 c.height = 600;
 
+const tileW = 32;
+const tileH = 32;
+const rotationX = 0.8;
+
 ctx.translate(c.width/2, 100)
 
-function drawTiles(x,y,rows,cols){
+function drawTiles(mapX,mapY,rows,cols){
     for(let j=0;j<rows;j++){
         for(let i=0;i<cols;i++){
-            drawBlock(x+i,y+j,Math.floor(Math.random()*5),32,0.8*32);
+            let z = Math.floor(Math.random()*5);
+            drawBlock(mapX+i,mapY+j,z,tileW,rotationX*tileH);
         }
     }
 }
