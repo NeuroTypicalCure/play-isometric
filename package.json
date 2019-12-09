@@ -2,8 +2,9 @@
   "name": "isometric",
   "version": "1.0.0",
   "description": "Status Preview --- ![](isostatus.png)",
-  "main": "index.js",
+  "private": true,
   "scripts": {
+    "start": "webpack && firefox ./dist/index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,6 +18,10 @@
   },
   "homepage": "https://github.com/NeuroTypicalCure/play-isometric#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "lodash": "^4.17.15",
+    "webpack": "^4.41.2"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.3.10"
   }
 }
