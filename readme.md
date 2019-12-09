@@ -1,3 +1,3 @@
 Status Preview
 ---
-![](isostatus.png)
+![](./src/resources/isostatus.png)
