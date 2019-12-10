@@ -1,3 +1,2 @@
-Status Preview
----
+__Status Preview__
 ![](./src/resources/isostatus.png)
