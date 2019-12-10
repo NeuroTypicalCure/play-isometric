@@ -4,7 +4,8 @@
   "description": "Status Preview --- ![](isostatus.png)",
   "private": true,
   "scripts": {
-    "start": "webpack --config ./config/webpack.config.js && (open ./dist/index.html || gnome-open ./dist/index.html || firefox ./dist/index.html || chrome ./dist/index.html || safari ./dist/index.html || edge ./dist/index.html || opera ./dist/index.html)",
+    "start": "webpack --watch --config ./config/webpack.config.js",
+    "build": "webpack --config ./config/webpack.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
