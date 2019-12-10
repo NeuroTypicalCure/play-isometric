@@ -1,14 +1,5 @@
 import pSBC from './services/color-service'
-import _ from 'lodash'
-
-function component() {
-    const element = document.createElement('div');
-    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-
-    return element;
-}
-
-document.body.appendChild(component());
+import Map from './classes/Map'
 
 let c = document.getElementById('c');
 let ctx = c.getContext('2d');
@@ -20,7 +11,16 @@ const tileW = 32;
 const tileH = 32;
 const rotationX = 0.8;
 
+let map = new Map(0,0,16,16);
+
+// camera
 ctx.translate(c.width/2, 100)
+
+drawMap(map);
+
+function drawMap(map){
+    drawTiles(map.x,map.y,map.w,map.h);
+}
 
 function drawTiles(mapX,mapY,rows,cols){
     for(let j=0;j<rows;j++){
@@ -79,5 +79,3 @@ function drawBlock(x,y,z,w,h,color){
 
     ctx.restore();		
 }
-
-drawTiles(0,0,16,16);
