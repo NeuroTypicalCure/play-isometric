@@ -1,6 +1,4 @@
-import pSBC from './services/color-service'
 import Map from './classes/Map'
-import Block from './classes/Block';
 
 let c = document.getElementById('c');
 let ctx = c.getContext('2d');
