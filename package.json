@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/NeuroTypicalCure/play-isometric#readme",
   "dependencies": {
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "webpack": "^4.41.2"
   },
   "devDependencies": {
